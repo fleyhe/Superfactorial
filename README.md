@@ -20,6 +20,8 @@ sudo gem install mongo
 mongo superfactorial
 db.fat.insert({n: "0", f: "1"})
 db.fat.insert({n: "1", f: "1"})
+db.sfat.insert({n: "0", f: "1"})
+db.sfat.insert({n: "1", f: "1"})
 ```
 
 ## Busca no banco e funcionamento
