@@ -38,7 +38,7 @@ client.close
 ```ruby
 f = fat(3)
 => 6
-doc = { :_id => BSON::ObjectId.new, :n => 3.to_s, f => f.to_s }
+doc = { :_id => BSON::ObjectId.new, :n => 3.to_s, :f => f.to_s }
 client[:fat].insert_one doc
 
 client.close
