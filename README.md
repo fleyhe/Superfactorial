@@ -45,3 +45,31 @@ client[:fat].insert_one doc
 
 client.close
 ```
+
+# Mysql
+
+## Startup schema
+
+```sql
+CREATE SCHEMA `superfactorial` ;
+
+CREATE TABLE `superfactorial`.`fat` (
+  `n` INT NOT NULL,
+  `f` LONGTEXT NOT NULL,
+  PRIMARY KEY (`n`));
+
+CREATE TABLE `superfactorial`.`sfat` (
+  `n` INT NOT NULL,
+  `f` LONGTEXT NULL,
+  PRIMARY KEY (`n`));
+
+
+delete from fat;
+delete from sfat;
+
+insert into fat values (0, "1");
+insert into fat values (1, "1");
+insert into sfat values (0, "1");
+insert into sfat values (1, "1");
+
+```
