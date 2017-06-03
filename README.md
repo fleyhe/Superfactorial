@@ -48,7 +48,7 @@ client.close
 
 # Mysql
 
-## Startup schema
+## Schema inicial
 
 ```sql
 CREATE SCHEMA `superfactorial` ;
@@ -71,5 +71,15 @@ insert into fat values (0, "1");
 insert into fat values (1, "1");
 insert into sfat values (0, "1");
 insert into sfat values (1, "1");
+
+```
+
+## Instalando dependências
+
+```shellscript
+
+sudo apt-get install mysql-client mysql-server libmysqlclient-dev
+sudo apt-get install ruby-mysql
+sudo gem install mysql
 
 ```
