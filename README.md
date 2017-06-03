@@ -79,7 +79,26 @@ insert into sfat values (1, "1");
 ```shellscript
 
 sudo apt-get install mysql-client mysql-server libmysqlclient-dev
-sudo apt-get install ruby-mysql
-sudo gem install mysql
+sudo apt-get install ruby-mysql2
+sudo gem install mysql2
+
+```
+
+## Usando
+
+```ruby
+
+require 'mysql2'
+client = Mysql2::Client.new(:host => "localhost",
+                            :database => "superfactorial",
+                            :username => "root",
+                            :password => "root")
+
+results = client.query("SELECT * FROM fat WHERE n == '1'")
+rs.to_a[0]["f"].to_i
+=> 1
+
+client.query("INSERT INTO fat VALUES (1,1)")
+
 
 ```
